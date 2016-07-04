@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Java2</title>
+	    <style>
+	    	h1 {
+	    		font-family: "arial";
+	    		color: red;
+	    	}
+	    	div {
+	    		background-color: #333;
+	    		margin-top: 20px;
+	    		padding-top: 60px;
+	    		padding-bottom: 60px;
+	     		width: 200px;
+	    	}
+	    	h2 {
+	    		font-family: "arial";
+	    		color: #fff;
+	    		text-align: center
+	    	}
+	    	p {
+	    		font-family: "arial";
+	    	}
+	    	.orange {
+	    		background-color: orange;
+	    	}
+	    	.photo1 {
+	    		width: 200px;
+	    		height: 150px;
+	    		margin-top: 20px;
+	    		float:left;
+	    	}
+	    	.photo2 {
+	    		width: 200px;
+	    		height: 150px;
+	    		margin-top: 20px;
+	    		float:left;
+	    	}
+	    </style>
+
+	</head>
+
+
+
+	<body>
+		<h1>ANIMATE</h1>
+		<div><h2>HIDE</h2></div>
+		<p>
+		  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?
+		</p>
+		<div class="orange"><h2>SHOW</h2></div>
+		<img class="photo1" src="images/01.jpeg">
+		<img class="photo2" src="images/02.jpeg">
+		<img class="photo1" src="images/03.jpeg">
+		<img class="photo2" src="images/04.jpeg">
+		
+		<script src="jquery-2.2.1.min.js"></script>
+ 
+	    <script>
+	      // run only when everything is loaded
+	      $(document).ready(function () {
+	 	    // fade out and in headline
+	 	    $("h1").fadeOut(1000);
+	 	    $("h1").fadeIn(1000);
+
+	 	    // slide up and down headline
+	 	    $("h1").slideUp(1000, function() {
+	 	      $("h1").slideDown(1000, function() {
+	 	      });
+	 	    });
+
+	 	    // hide and show color divs
+	 	    $("div").hide(1000, function() {
+	 	      $("div").show(4000, function() {
+		 	  });
+	 	    });
+		    // hide and show paragraph
+		    $("p").hide(2000, function() {
+ 		      $("p").show(2000, function() {
+		  	  });
+	 	    });
+	 	    // fade out and in class .image1
+	 	    $(".photo1").fadeOut(1000, function() {
+	 	      $(".photo1").fadeIn(1000, function() {
+		  	  });
+	 	    });
+	 	    // hide abd show class.photo2
+	 	    $(".photo2").hide(1000, function() {
+	 	      $(".photo2").show(4000, function() {
+		  	  });
+	 	    });
+	 	  });
+ 		</script>
+
+	</body>
+
+
+
+
+
+
+
+
+
+</html>
